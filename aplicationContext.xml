@@ -5,12 +5,21 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-<bean id="roless" class="BATCH3.Di_Constructorinjection.Roles">
+<bean id="Roles" class="  BATCH3.Di_setterinjection.Roles">
 	
-	<constructor-arg name="charactername" value="yashwanth" type="java.lang.String">
-		
-	</constructor-arg>
-	<constructor-arg name="responsibility" value="brother" type="java.lang.String"></constructor-arg>
+	<property name="charactername" value="Meghana"></property>
+	<property name="responsibility" value="sister"></property>
 	
 </bean>
+<bean id="Roles1" class="  BATCH3.Di_setterinjection.Roles">
+	
+	<property name="charactername" value="Meghana"></property>
+	<property name="responsibility" value="brother"></property>
+	
+</bean>
+
+
+
+
+
 </beans>

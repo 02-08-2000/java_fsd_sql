@@ -1,25 +1,17 @@
-package UST_BATCHN0_3.Junit5testcase;
-
-import java.util.Scanner;
+package BATCH3.Selenium;
 
 /**
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("enter a value:");
-        int n=sc.nextInt();
-        if(n%2==0) {
-        	System.out.println("even number");
-        }
-        	else 
-        	{
-        		System.out.println("odd number");
-        	}
-        
-    }
-}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+ public class App{
+    	   public static void main(String[] args) {
+    	      WebDriver driver = new ChromeDriver();
+    	      String url = " https://www.tutorialspoint.com/questions/index.php";
+    	      driver.get(url);
+    	   }
+    	}
+    
+
