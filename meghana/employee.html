@@ -1,0 +1,122 @@
+<!DOCTYPE html><html>
+    <head>
+     <style>
+        #form-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+        
+        #employee-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          box-shadow: 0px 0px 10px #ccc;
+          max-width: 500px;
+          width: 100%;
+          background-color:hotpink;
+        }
+        
+        #employee-form h2 {
+          margin-bottom: 20px;
+          font-size: 24px;
+          text-align: center;
+        }
+        
+        #employee-form label {
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          background-color: aqua;
+        }
+        
+        #employee-form input {
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          margin-bottom: 20px;
+          width: 100%;
+          max-width: 400px;
+          background-color: aqua;
+      
+        }
+        
+        #employee-form button {
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          background-color: #1c00ba;
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+        }
+        
+        #employee-form button:hover {
+          background-color: #31007f;
+        }
+        </style>
+        <body>
+           
+        <div id="form-container">
+                <form id="employee-form" method="post">
+                    <h2>employee-form</h2>
+
+                    <label>id:</label><br>
+                    <input type="text" id="id" name="employee id" required><br>
+
+                    <label>name:</label><br>
+                    <input type="text" id="name" name="employeename" required><br>
+
+                    <label>location:</label><br>
+                    <input type="text" id="location" name="employeelocation" required><br>
+
+                    <label>address:</label><br>
+                    <input type="text" id="address" name="employeeaddress" required><br>
+
+                    <label>blood-group:</label><br>
+                    <input type="text" id="blood-group" name="employeeblood-group" required><br>
+
+                    <labe>experience:</label><br>
+                    <input type="text" id="experience" placeholder="employeeexperience"  required><br>
+
+                    <label>skill:</label><br>
+                    <input type="text" id="skill" name="employeeskills" required><br>
+
+                    <button type="submit" id="submit-button">submit</button>
+        </form>
+    </div><script>
+    
+        const from=document.getElementById('employee-form');
+        const submitbutton=document.getElementById('submit-button');
+        submit-button.addEventListener('click', function(event) {
+            event.preventDefault();
+           const fromdata=new formdata(form);
+           xhr.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+              console.log(this.responseText);
+            }
+          };
+        
+          // Send form data using GET method
+          xhr.open('GET', '/submit-employee-data?' + new URLSearchParams(formData).toString());
+          xhr.send();
+        
+          // Send form data using POST method
+          xhr.open('POST', '/submit-employee-data');
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.send(new URLSearchParams(formData).toString());
+        
+          // Clear form data
+          form.reset();
+        });
+    </script>
+    
+        </body>
+    </head>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html><html>
+    <head>
+        <title>registration page</title>
+        <style>
+            body {
+        background-color: gold;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"], input[type="email"], input[type="password"] {
+        display: block;
+        margin-bottom: 10px;
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: rosybrown;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: red;
+      }
+
+      .error {
+        color: red;
+        margin-bottom: 10px;
+      }
+        </style>
+    </head><body>
+        <h1> registration form</h1>
+        <form id="registraion">
+            <label>name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <div id="name-error" class="error"></div>
+
+            <label>email:</label><br>
+            <input type="text" id="email" name="email" required><br>
+            <div id="email-error" class="error"></div>
+
+            <label>password:</label><br>
+            <input type="text" id="password" name="password" required><br>
+            <div id="password-error" class="error"></div>
+
+            <label>conformpassword:</label><br>
+            <input type="text" id="conformpassword" name="conformpassword" required><br>
+            <div id="conformpassword-error" class="error"></div>
+            <input type="submit" value="registration"><br>
+
+        </form>
+        <script type="type/javascript" src="registration.js"></script>
+    </body>
+</html>

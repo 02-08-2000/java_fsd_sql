@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head><title>roman number to number</title>
+        <style>
+          html{
+                background-color: aqua;
+                text-align: center;
+               
+            }
+        </style>
+        
+
+    </head>
+    <body>
+        <from id="roman" style="text-align: center;">
+            <h2>roman to number</h2>
+
+            <label>roman-input:</label><br>
+            <input type="text" id="roman-input" name="romannumber"><br>
+
+            <button onclick="convert()">convert</button>
+            <div id="result"></div>
+        </from>
+        <script>
+            
+            function roman_to_int(Str1);
+            {
+                if(Str1==null){
+                    return -1;
+                    var num=char_to_int(Str1.charAt(0));
+                    var curr,pre;
+                }
+                for(var i=1; i<Str1.lenght;i++){
+                 
+                    curr=char_to_int(Str1.charAt(i));
+                    pre=char_to_int(Str1.charAt(i-1));
+                    if(curr<=pre){
+                        num+=curr;
+                    }
+                    else{
+                        num=num-pre*2+curr;
+                    }
+                }
+                return num;
+            }
+            function char_to_int(c)
+            {
+                switch(c){
+                    case 'I': return 1;
+                    case 'V':return 5;
+                    case 'X':return 10;
+                    case 'L':return 50;
+                    case 'C':return 100;
+                    case 'D':return 500;
+                    case 'M':return 1000;
+                    default:return -1;
+                }
+            }
+            function convert(){
+                const romaninput=document.getElementById("roman-input").values;
+                const result=romanToNumber(romaninput);
+                const resultElement=document.getElementById("result");
+                resultElement.innerText='$(romaninput)=$(result)';
+            }
+        </script>
+    </body>
+</html>
