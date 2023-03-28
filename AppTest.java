@@ -1,4 +1,4 @@
-package UST_BATCHN0_3.Junit5testcase;
+package BATCH3.Di_Constructorinjection;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
